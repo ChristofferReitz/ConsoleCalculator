@@ -36,9 +36,17 @@ namespace ConsoleCalculator
                             Console.WriteLine(firstNumber * secondNumer);
                             break;
                         case "/":
-                            Console.WriteLine(secondNumer / firstNumber);
+                            if(secondNumer == 0)
+                        {
+                            Console.WriteLine("You can't divide by zero");
                             break;
-                    }
+                        }
+                        Console.WriteLine(secondNumer / firstNumber);
+                            break;
+                        case "sqrt":
+                        Console.WriteLine(Math.Sqrt(firstNumber));
+                        break;
+                }
                 }
         }
     }
